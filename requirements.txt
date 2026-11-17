@@ -1,0 +1,6 @@
+pyyaml
+numpy
+# reading real CANedge logs (not needed for CSV/simulated input or for tests):
+asammdf
+# only for canedge2.deviceconfig --schema:
+jsonschema

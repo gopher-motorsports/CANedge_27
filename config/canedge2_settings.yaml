@@ -1,0 +1,21 @@
+# Settings this team wants on every CANedge2.  See canedge2/deviceconfig.py.
+# `path` = dotted path into the config JSON saved from CSS Electronics' editor.
+# Fill the paths in on bring-up day (they depend on firmware version).
+settings:
+  can1_bitrate:
+    path: TODO
+    value: 1000000          # GopherCAN buses run 1 Mbit/s (DataLogger_25.ioc: CAN1/CAN2 CalculateBaudRate=1000000)
+  can2_bitrate:
+    path: TODO
+    value: 1000000
+  can1_silent_mode:
+    path: TODO
+    value: monitoring       # zero transmission: the logger must never ACK/disturb the car's bus
+    # CSS offers "restricted" (ACK only) and "monitoring" (no transmission). Use monitoring,
+    # unless the bus has too few other nodes to produce a valid ACK (then use restricted).
+  can2_silent_mode:
+    path: TODO
+    value: monitoring
+  file_split_seconds:
+    path: TODO
+    value: 600              # short files = less lost if a card dies; also quick to upload
